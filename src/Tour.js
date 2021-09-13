@@ -1,7 +1,20 @@
 import React from 'react';
 
-const Tour = () => {
-  return <div>tour component</div>;
+const Tour = ({ id, image, info, price, name }) => {
+  return (
+    <article className='single-tour'>
+      <img src={image} alt={name} />
+
+      <footer>
+        <div className='tour-info'>
+          <h4>{name}</h4>
+          <h4>{price}</h4>
+        </div>
+        <p>{info}</p>
+        <button className='delete-btn'>not interested</button>
+      </footer>
+    </article>
+  );
 };
 
 export default Tour;
